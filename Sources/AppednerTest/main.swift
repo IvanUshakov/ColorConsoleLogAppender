@@ -17,5 +17,5 @@ import ColorConsoleLogAppender
 
 let logAppender = ConsoleLogAppender()
 let logger = Logger(name: "testLogger", appender:logAppender)
-struct TestError: ErrorProtocol { let description: String }
+struct TestError: Error { let description: String }
 logger.log("Stuff failed pretty badly", error: TestError(description: "Everything failed badly"))

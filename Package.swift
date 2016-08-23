@@ -10,6 +10,6 @@ let package = Package(
             name: "ColorConsoleLogAppender")
     ],
     dependencies: [
-        .Package(url: "https://github.com/Zewo/Log.git", majorVersion: 0, minor: 9),
+        .Package(url: "https://github.com/IvanUshakov/Log.git", majorVersion: 0, minor: 10),
     ]
 )

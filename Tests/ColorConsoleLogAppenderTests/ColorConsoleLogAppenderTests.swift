@@ -11,7 +11,7 @@ class ColorConsoleLogAppenderTests: XCTestCase {
     func testAppender() {
         let logAppender = ConsoleLogAppender()
         let logger = Logger(name: "testLogger", appender:logAppender)
-        struct TestError: ErrorProtocol { let description: String }
+        struct TestError: Error { let description: String }
         logger.log("Stuff failed pretty badly", error: TestError(description: "Everything failed badly"))
         // [1465345612][/Users/dan/Developer/projects/Zewo/Development/Log/Tests/Log/LogTests.swift:testStandardOutputAppender():12:19]: Stuff failed pretty badly: (TestError #1)(description: "Everything failed badly")
     }
